@@ -30,8 +30,8 @@ print(dns,ip,netmask,gateway)
 interface="""auto lo
 iface lo inet loopback
 
-auto eth0
-iface eth0 inet static 
+auto ens160
+iface ens160 inet static 
 address %s
 netmask %s
 gateway %s
