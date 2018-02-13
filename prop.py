@@ -61,3 +61,5 @@ if hostname==myname:
 else:
     os.system("echo %s > /etc/hostname" %hostname)
     os.system("hostname %s" %hostname)
+    
+os.system('python /root/ovfenv/remove.py')
