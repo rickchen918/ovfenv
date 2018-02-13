@@ -47,8 +47,8 @@ os.system("cat template > /etc/network/interfaces")
 os.system("rm /root/template")
 
 # reset network interface 
-#os.system("ifdown eth0 && ifup eth0")
-os.system('/etc/init.d/networking restart')
+os.system("ifdown ens160 && ifup ens160")
+#os.system('/etc/init.d/networking restart')
 
 # modify vm hostname 
 #with open("/etc/hostname") as localname:
