@@ -45,6 +45,7 @@ NI.close()
 
 os.system("cat template > /etc/network/interfaces")
 os.system("rm ./template")
+os.system("rm ./ovfxml")
 
 # reset network interface 
 os.system("ip address flush ens160")
