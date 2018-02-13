@@ -47,8 +47,8 @@ os.system("cat template > /etc/network/interfaces")
 os.system("rm ./template")
 
 # reset network interface 
-os.system("ifdown ens160 && ifup ens160")
-#os.system('/etc/init.d/networking restart')
+os.system("ip address flush ens160")
+os.system('systemctl restart networking.service')
 
 # modify vm hostname 
 #with open("/etc/hostname") as localname:
