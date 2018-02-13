@@ -44,7 +44,7 @@ with open("template","w") as NI:
 NI.close()
 
 os.system("cat template > /etc/network/interfaces")
-os.system("rm /root/template")
+os.system("rm ./template")
 
 # reset network interface 
 os.system("ifdown ens160 && ifup ens160")
