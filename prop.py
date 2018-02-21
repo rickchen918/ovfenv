@@ -61,5 +61,10 @@ if hostname==myname:
 else:
     os.system("echo %s > /etc/hostname" %hostname)
     os.system("hostname %s" %hostname)
-    
+
+# configure /etc/hosts file 
+cmd="echo %s %s >> /etc/hosts"%(ip,hostname)
+os.system("echo 127.0.0.1 localhost > /etc/hosts")
+os.system(cmd)
+        
 os.system('python /root/ovfenv/remove.py')
